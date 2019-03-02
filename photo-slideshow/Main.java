@@ -29,7 +29,7 @@ public class Main {
 		Photo.photoSimpleView(finalPhotos);
 		
 		Collections.sort(finalPhotos, Photo.horizontalComparator); //sort ascending by number of tags
-		Queue<Photo> results = Photo.getResults(finalPhotos, 2000);
+		Queue<Photo> results = Photo.getResults(finalPhotos, 1000);
 		IO.write(printer, results);
 		
 		scanner.close();
