@@ -57,7 +57,7 @@ public class IO {
 	
 	public static void write(PrintWriter printer, Queue<Photo> results) {
 		long startTime = System.nanoTime();  
-		printer.print(results.size() + "\n"); //Photo.numberOfSlides   , acu cred ca le ia pe toate, testeaza
+		printer.print(results.size() + "\n");
 		Photo helper;
 		while (!results.isEmpty()) {
 			helper = results.poll();

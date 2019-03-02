@@ -105,7 +105,6 @@ public class Photo {
 		
 		Photo currentPhoto = it.next(); //initial case, current slide
 		Photo helperPhoto;
-		Photo.numberOfSlides--;
 		
 		while(Photo.numberOfSlides > 0) {
 			it.remove();
@@ -138,7 +137,7 @@ public class Photo {
 			results.add(currentPhoto);
 			it = photoList.listIterator(bestIndex);
 			nextIndex = it.nextIndex();
-			currentPhoto = it.next();
+			if (Photo.numberOfSlides > 1) currentPhoto = it.next();
 			helperIndex = 0; bestIndex = 0;
 			bestInterestFactor = 0; helperInterestFactor = 0;
 			Photo.numberOfSlides--; count = 0;
